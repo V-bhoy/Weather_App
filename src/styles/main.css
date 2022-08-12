@@ -1,0 +1,311 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(24, 170, 244);
+    background-image: url("https://images.unsplash.com/photo-1454789476662-53eb23ba5907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2VhdGhlciUyMGZvcmVjYXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.rain{
+    background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFpbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+}
+.snow{
+    background-image: url("https://images.unsplash.com/photo-1478265409131-1f65c88f965c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNub3d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+}
+.clouds{
+    background-image: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+}
+.fog{
+    background-image: url("https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
+}
+.night{
+    background-image: url("https://images.unsplash.com/photo-1590418606746-018840f9cd0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmlnaHR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+}
+
+.zero-vis{
+    visibility: hidden;
+    opacity: 0;
+}
+.fade-in{
+    visibility: visible;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+@keyframes fadeInOpacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+   width: 100%;
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   padding: 0.5rem;
+}
+
+main{
+   width: 100%;
+   max-width: 700px;
+   max-height: 1050px;
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+   background-color: rgba(0,0, 0, 0.4);
+   border-radius: 10px;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+img{
+    display: block;
+}
+
+hr{
+    width: 90%;
+    margin: auto;
+    border: 1px solid lightgray;
+}
+
+.none{
+    display: none;
+}
+
+.block{
+    display: block;
+}
+
+.offscreen{
+    position: absolute;
+    left: -10000px;
+}
+
+.skip-link{
+    position: absolute;
+    top: -999px;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    padding: 14px;
+    z-index: 1;
+}
+
+.skip-link:focus, .skip-link:active{
+    top: auto;
+    left: auto;
+}
+
+.navButtons{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+}
+.navButtons>button,#search_btn{
+    min-width: 64px;
+    min-height: 64px;
+    border: 2px solid lightseagreen;
+    border-radius: 80px;
+    outline: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+}
+.navButtons>button:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+#searchBar{
+    padding: 0.5rem 0.5rem 1.5rem;
+}
+.search_form{
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid white;
+    border-radius: 500px;
+}
+.searchLocation{
+    flex-grow: 1;
+    border: none;
+    margin-right: 0.25rem;
+    background-color: transparent;
+    width: calc(100% - 52px);
+    outline: none;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.75rem 0 0.75rem 0.75rem;
+}
+.searchLocation::placeholder{
+    color: #f2f2f2;
+}
+#search_btn{
+    border: none;
+    font-size: 1.7rem;
+}
+#search_btn:hover{
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4); 
+}
+.search_form:focus-within,
+.search_form:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#currentForecast>h2{
+   font-size: 1.3rem;
+   font-weight: normal;
+   text-align: center;
+   margin-bottom: 1rem;
+}
+.currForecast_content{
+    width: 100%;
+    font-size: 1.7rem;
+    margin: auto auto 2rem;
+    display: grid;
+}
+.temp{
+    display: flex;
+    justify-content: center;
+    grid-row: 1/span 3;
+    grid-column: 1/span 2;
+    font-size: 9rem;
+    letter-spacing: 0;
+    text-shadow: 1px 0 5px rgba(0,0,0,0.4);
+    position: relative;
+}
+.unit{
+    font-size: 1.65rem;
+    color: #f2f2f2;
+    position: absolute;
+    top: 55%;
+    left: 75%;
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    grid-row: 1/span 1;
+    grid-column: 3/span 2;
+}
+.icon>i{
+    font-size: 4rem;
+    text-shadow: 1px 0 5px rgba(0,0,0,0.4);
+}
+.maxTemp{
+    display: flex;
+    justify-content: center;
+    grid-row: 2/span 1;
+    grid-column: 3/span 2;
+}
+.minTemp{
+    display: flex;
+    justify-content: center;
+    align-self: start;
+    grid-row: 3/span 1;
+    grid-column: 3/span 2;
+    color: #f2f2f2;
+}
+.desc{
+    display: flex;
+    justify-content: center;
+    grid-row: 4/span 1;
+    grid-column: 1/span 4;
+    padding-top: 0.5rem;
+    margin-top: 1.5rem;
+}
+.feels{
+    display: flex;
+    justify-content: center;
+    grid-row: 5/span 1;
+    grid-column: 1/span 4;
+    padding-top: 0.5rem;
+    font-weight: normal;
+}
+.humidity{
+    display: flex;
+    justify-content: center;
+    grid-row: 6/span 1;
+    grid-column: 1/span 4;
+    padding-top: 0.5rem;
+    font-weight: normal;
+    color: #f2f2f2;
+}
+.wind{
+    display: flex;
+    justify-content: center;
+    grid-row: 7/span 1;
+    grid-column: 1/span 4;
+    padding-top: 0.5rem;
+    font-weight: normal;
+    color: #f2f2f2;
+}
+
+#dailyForecast>h2{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+.dailyForecast_content{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5rem 0;
+}
+.forecastDay{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+@media all and (max-width: 768px){
+    .navButtons>button, #search_btn{
+        min-width: 48px;
+        min-height: 48px;
+        font-size: 1.25rem;
+    }
+    #currentForecast>h2{
+        font-size: 1rem;
+    }
+     .temp{
+        font-size: 8rem;
+    }
+    .unit{
+        left: 85%;
+    }
+    .icon>i{
+    font-size: 3rem;
+   }  
+}
+
+@media all and (max-width: 400px){
+    .currForecast_content{
+        font-size: 1.3rem;
+    }
+   
+}
+
+@media all and (max-width: 375px){
+   .currForecast_content{
+    font-size: 1.1rem;
+   }
+   .temp{
+    font-size: 6rem;
+   }
+}
