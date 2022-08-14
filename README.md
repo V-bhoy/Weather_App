@@ -1,18 +1,18 @@
 # Weather_App
  
-##Deployed Link 
+## Deployed Link 
 > You can see here - https://my-weather-app-1303.netlify.app
 
-##Tech Stack Used
+## Tech Stack Used
 > Pure HTML, CSS and JS
 
-##Features
+## Features
 - Search bar for location search
 - Current weather details 
 - Six Day Weather Forecast 
 - Toggle Temperature Unit
 - Geolocation feature
 
-##API Used
+## API Used
 > Open Weather map - fetched current weather forecast and six day forecast for current location or any city, state, country etc.
 >Find details of the site here - https://openweathermap.org/api
