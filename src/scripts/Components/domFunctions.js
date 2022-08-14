@@ -156,7 +156,7 @@ const createCurrConditionDivs = (data, unit) => {
     const feels = createElem(
       "div",
       "feels",
-      `Feels like ${data.current.feels_like}°`
+      `😌 Feels like ${data.current.feels_like}°`
     );
     const maxTemp = createElem(
       "div",
@@ -168,9 +168,23 @@ const createCurrConditionDivs = (data, unit) => {
       "minTemp",
       `Low ${data.daily[0].temp.min}°${tempUnit}`
     );
-    const humidity = createElem("div", "humidity", `Humidity ${data.current.humidity}%`);
-    const wind = createElem("div", "wind", `Wind ${data.current.wind_speed} ${windUnit}`);
-    return [icon, temp, descDiv, feels, maxTemp, minTemp, humidity, wind]
+    const humidity = createElem(
+      "div",
+      "humidity",
+      `🌫 Humidity ${data.current.humidity}%`
+    );
+  const wind = createElem(
+    "div",
+    "wind",
+    `💨 Wind ${data.current.wind_speed} ${windUnit}`
+  );
+  const d1 = new Date(data.current.sunrise * 1000);
+  const t1 = d1.toLocaleTimeString();
+  const sunrise = createElem("div", "rise", `🌅 Sunrise: ${t1} am`);
+  const d2 = new Date(data.current.sunset * 1000);
+  const t2 = d2.toLocaleTimeString();
+  const sunset = createElem("div", "set", `🌇 Sunset: ${t2} pm`);
+    return [icon, temp, descDiv, feels, maxTemp, minTemp, humidity, wind, sunrise, sunset]
 }
 
 const createMainImgDiv = (icon, altText) => {
