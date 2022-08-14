@@ -3,7 +3,7 @@ export default class CurrLocation {
     this._name = "Current Location";
     this._lat = null;
     this._lon = null;
-    this._unit = "imperial";
+    this._unit = "metric";
   }
 
   getName() {

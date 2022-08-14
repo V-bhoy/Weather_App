@@ -8,25 +8,26 @@ html{
     font-family: "Montserrat", sans-serif;
     background-color: rgb(24, 170, 244);
     background-image: url("https://images.unsplash.com/photo-1454789476662-53eb23ba5907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2VhdGhlciUyMGZvcmVjYXN0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
-    background-size: cover;
     color: white;
     font-weight: bold;
     letter-spacing: 1px;
+    background-size: cover;
 }
 .rain{
-    background-image: url("https://images.unsplash.com/photo-1534274988757-a28bf1a57c17?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFpbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.pexels.com/photos/8589272/pexels-photo-8589272.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
 .snow{
     background-image: url("https://images.unsplash.com/photo-1478265409131-1f65c88f965c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHNub3d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
 }
 .clouds{
-    background-image: url("https://images.unsplash.com/photo-1513002749550-c59d786b8e6c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Y2xvdWR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.pexels.com/photos/3783385/pexels-photo-3783385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }
 .fog{
     background-image: url("https://images.unsplash.com/photo-1485236715568-ddc5ee6ca227?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Zm9nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60");
 }
 .night{
-    background-image: url("https://images.unsplash.com/photo-1590418606746-018840f9cd0f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bmlnaHR8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60");
+    background-image: url("https://images.pexels.com/photos/2098427/pexels-photo-2098427.jpeg?auto=compress&cs=tinysrgb&w=600");
+ 
 }
 
 .zero-vis{
@@ -80,6 +81,7 @@ hr{
     width: 90%;
     margin: auto;
     border: 1px solid lightgray;
+    margin-top: 5px;
 }
 
 .none{
@@ -175,19 +177,22 @@ hr{
 }
 .currForecast_content{
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     margin: auto auto 2rem;
     display: grid;
+    gap: 10px;
+    padding: 1.5rem;
 }
 .temp{
-    display: flex;
-    justify-content: center;
     grid-row: 1/span 3;
     grid-column: 1/span 2;
-    font-size: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     letter-spacing: 0;
     text-shadow: 1px 0 5px rgba(0,0,0,0.4);
     position: relative;
+    font-size: 6rem;
 }
 .unit{
     font-size: 1.65rem;
@@ -211,14 +216,15 @@ hr{
     justify-content: center;
     grid-row: 2/span 1;
     grid-column: 3/span 2;
+    text-align: center;
 }
 .minTemp{
     display: flex;
     justify-content: center;
-    align-self: start;
     grid-row: 3/span 1;
     grid-column: 3/span 2;
     color: #f2f2f2;
+    text-align: center;
 }
 .desc{
     display: flex;
@@ -284,8 +290,8 @@ hr{
         font-size: 1rem;
     }
      .temp{
-        font-size: 8rem;
-    }
+    font-size: 4rem;
+   }
     .unit{
         left: 85%;
     }
@@ -297,6 +303,7 @@ hr{
 @media all and (max-width: 400px){
     .currForecast_content{
         font-size: 1.3rem;
+        padding: 0.8rem;
     }
    
 }
@@ -306,6 +313,6 @@ hr{
     font-size: 1.1rem;
    }
    .temp{
-    font-size: 6rem;
+    font-size: 2.5rem;
    }
 }
