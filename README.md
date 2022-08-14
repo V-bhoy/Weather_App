@@ -16,3 +16,7 @@
 ## API Used
 > Open Weather map - fetched current weather forecast and six day forecast for current location or any city, state, country etc.
 >Find details of the site here - https://openweathermap.org/api
+
+## Mobile View
+
+![Screenshot 2022-08-14 at 10 45 42 PM](https://user-images.githubusercontent.com/83490034/184547860-26c17fff-cf80-466f-b35a-8f2fa6a245aa.png)
