@@ -1,6 +1,6 @@
 export const setPlaceholderText = () => {
     const inp = document.getElementById("searchLocation");
-    window.innerWidth<400 ? (inp.placeholder = "City, State, Country") : (inp.placeholder="City, State, Country, or Zip Code")
+    window.innerWidth<400 ? (inp.placeholder = "City, State, Country") : (inp.placeholder = "City, State, Country, or Zip Code")
 }
 
 export const addSpinner = (elem) => {
