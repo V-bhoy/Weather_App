@@ -20,3 +20,7 @@
 ## Mobile View
 
 ![Screenshot 2022-08-14 at 10 45 42 PM](https://user-images.githubusercontent.com/83490034/184547860-26c17fff-cf80-466f-b35a-8f2fa6a245aa.png)
+
+## Desktop View
+
+![Screenshot 2022-08-14 at 10 46 12 PM](https://user-images.githubusercontent.com/83490034/184547916-37c17fa9-7d5c-45cb-8e2a-0b167f217224.png)
